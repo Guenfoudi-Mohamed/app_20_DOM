@@ -11,20 +11,29 @@
         <!-- <div class="shape" style="--height:90px;--animationduration:5s;"></div> -->
         <!-- <section id="section">
         </section> -->
+        <div id="shapes">
 
+        </div>
         <div class="container">
             <h1 class="title">CSS3 Perspective Playground</h1>
-            <div class="inputControles">
-                <label>perspective: <span>380px</span></label>
-                <input type="range" min="" max="" class="perspective">
-                <label>rotateX: <span>35deg</span></label>
-                <input type="range" min="" max="" class="rotateX">
-                <label>rotateY: <span>0deg</span></label>
-                <input type="range" min="" max="" class="rotateY">
-                <label>rotateZ: <span>0deg</span></label>
-                <input type="range" min="" max="" class="rotateZ">
-                <div class="btns">
-                    <input type="button" value="Reset"><input type="button" value="Copy">
+            <div class="ControlesBox">
+                <!-- inputControles -->
+                <div class="inputControles">
+                    <label class="lblPerspective">perspective: <span>0 px</span></label>
+                    <input type="range" min="0" max="500" class="inpPerspective">
+                    <label class="lblRotateX">rotateX: <span>0 deg</span></label>
+                    <input type="range" min="-90" max="90" class="inpRotateX">
+                    <label class="lblRotateY">rotateY: <span>0 deg</span></label>
+                    <input type="range" min="-90" max="90" class="inpRotateY">
+                    <label class="lblRotateZ">rotateZ: <span>0 deg</span></label>
+                    <input type="range" min="-90" max="90" class="inpRotateZ">
+                    <div class="btns">
+                        <input type="button" value="Reset" class="reset" title="reset"><input type="button" class="copy" value="Copy" title="Copy">
+                    </div>
+                </div>
+                <!-- Shape Test -->
+                <div class="boxTest">
+                    <div class="box"></div>
                 </div>
             </div>
         </div>
