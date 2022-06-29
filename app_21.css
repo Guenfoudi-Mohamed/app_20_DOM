@@ -2,12 +2,21 @@
 *{margin: 0px;padding: 0px;outline: none;text-decoration: none;list-style: none;box-sizing: border-box;}
 :is(::after,::before){margin: 0px;padding: 0px;box-sizing: border-box;}
 body{min-height: 100vh;margin:0px auto;background-color: rgb(40,26,49);overflow: hidden;}
-body .shape{/*width: 5px,3px;*//*height: 90px,20px;*/background-image: linear-gradient(to bottom,transparent,rgba(255, 255, 255, 0.7));position: absolute;top: -90px;opacity: 1;margin-left:20px; transform: translateY(0px);border-radius: 7px; animation:move linear infinite;animation-duration: var(--animationduration);animation-delay: var(--animationdelay);}
+body #shapes{width: 100vw;min-height: inherit;position: fixed;z-index: 1;}
+body #shapes .shape{/*width: 5px,3px;*//*height: 90px,20px;*/background-image: linear-gradient(to bottom,transparent,rgba(255, 255, 255, 0.7));position: absolute;top: -90px;opacity: 1; transform: translateY(0px);border-radius: 7px; animation:move linear infinite;animation-duration: var(--animationduration);animation-delay: var(--animationdelay);}
 @keyframes move{
     0%{transform: translateY(0px) translateX(0vw);opacity: 1;}
-    50%{transform: translateY(calc(50vh + var(--height))) translateX(2vw);opacity: 1;}
+    50%{transform: translateY(calc(50vh + var(--height))) translateX(-1vw);opacity: 1;}
     100%{transform: translateY(calc(100vh + var(--height))) translateX(0vw);opacity: 1;}
 }
 
-body .container .title{color: #fff;}
+body .container{position: fixed;top: 50%;left: 50%;transform: translate(-50%,-50%);z-index: 2;}
+body .container .title{color: #fff;text-align: center;}
+body .container .ControlesBox{display: flex;justify-content: center;align-items: center;margin-top: 35px;}
 body .container .inputControles label{display: block;color: #fff;}
+body .container .inputControles label span{float: right;}
+body .container .inputControles > input{margin-bottom: 15px;margin-top: 5px;}
+body .container .inputControles .btns input{background-color:rgb(143,129,242);color: #fff;border: none;font-size: 17px;padding: 5px;cursor: pointer;}
+body .container .inputControles .btns input:nth-child(2){margin-left: 5px;}
+body .container .boxTest{border: 1px solid rgb(143,129,242);padding: calc(30px * 2);perspective: 1000px;transform-style: preserve-3d;margin-left: 60px;}
+body .container .boxTest .box{width: 200px;height: 200px;background-color:rgb(143,129,242);}
