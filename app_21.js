@@ -32,8 +32,8 @@ function setRnadomShape(){
     }
     height();
     function left(){
-        stockLeft = Math.ceil(Math.random() * 98);
-        if(stockLeft >= 2 && stockLeft <= 98){
+        stockLeft = Math.ceil(Math.random() * 99);
+        if(stockLeft >= 1 && stockLeft <= 99){
             shape.style.setProperty('left',`${stockLeft}vw`);
         }
         else{
@@ -64,7 +64,7 @@ function setRnadomShape(){
     document.querySelector('body #shapes').appendChild(shape);
 }
 // RUN THE FUNCTION 
-let times = 75;
+let times = 20;
 while(times>0){
     times--;
     setRnadomShape();
